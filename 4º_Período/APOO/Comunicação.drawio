@@ -1,0 +1,86 @@
+<mxfile host="app.diagrams.net" modified="2023-11-14T18:35:27.183Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 OPR/104.0.0.0" etag="zuq_-CXL5kEPSl7N28Uk" version="22.1.0" type="google">
+  <diagram name="Página-1" id="UW2DbZerr0S3dajqCY9U">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3U6QGmojfoqRvh413eN6-21" value="1: realizaConsulta()" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeWidth=0.8;" edge="1" parent="1">
+          <mxGeometry x="-0.6" y="-50" width="80" relative="1" as="geometry">
+            <mxPoint x="320" y="550" as="sourcePoint" />
+            <mxPoint x="320" y="600" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ta8nGKGlw-kVvbDF1VIJ-1" value="&lt;u&gt;:Sistema&lt;/u&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="280" y="610" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Ta8nGKGlw-kVvbDF1VIJ-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="323" y="520" width="8" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Ta8nGKGlw-kVvbDF1VIJ-4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="1">
+          <mxGeometry x="390" y="626" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="DkcHP9cy_Nn04fWTdEtK-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="Ta8nGKGlw-kVvbDF1VIJ-5" target="DkcHP9cy_Nn04fWTdEtK-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EZGjnWxK_DrFeq-K58jN-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="Ta8nGKGlw-kVvbDF1VIJ-5" target="EZGjnWxK_DrFeq-K58jN-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="605" y="520" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="605" y="525" />
+              <mxPoint x="920" y="525" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ta8nGKGlw-kVvbDF1VIJ-5" value="&lt;u&gt;:Cliente&lt;/u&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="550" y="605" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Ta8nGKGlw-kVvbDF1VIJ-6" value="4a:[consulta_nova]create_consulta (id_animal&amp;nbsp;)&amp;nbsp;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeWidth=0.8;" edge="1" parent="1">
+          <mxGeometry x="0.1667" y="10" width="80" relative="1" as="geometry">
+            <mxPoint x="720" y="620" as="sourcePoint" />
+            <mxPoint x="840" y="620" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ta8nGKGlw-kVvbDF1VIJ-7" value=":Consulta" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="920" y="605" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Ta8nGKGlw-kVvbDF1VIJ-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="1">
+          <mxGeometry x="660" y="626" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="Ta8nGKGlw-kVvbDF1VIJ-13" value="2:faz_consulta()&amp;nbsp;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeWidth=0.8;" edge="1" parent="1">
+          <mxGeometry x="-0.3333" y="9" width="80" relative="1" as="geometry">
+            <mxPoint x="424" y="620" as="sourcePoint" />
+            <mxPoint x="544" y="620" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DkcHP9cy_Nn04fWTdEtK-1" value="&lt;u&gt;:Animal&amp;nbsp;&lt;/u&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="550" y="730" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="DkcHP9cy_Nn04fWTdEtK-4" value="3: get_identifier" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeWidth=0.8;" edge="1" parent="1">
+          <mxGeometry x="-0.1429" y="-45" width="80" relative="1" as="geometry">
+            <mxPoint x="625" y="730" as="sourcePoint" />
+            <mxPoint x="625" y="660" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EZGjnWxK_DrFeq-K58jN-1" value="&lt;u&gt;:Consulta&lt;/u&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="920" y="500" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="EZGjnWxK_DrFeq-K58jN-4" value="4b:[consulta_marcada]verifica_consulta(id_animal&amp;nbsp;)&amp;nbsp;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeWidth=0.8;" edge="1" parent="1">
+          <mxGeometry x="0.1667" y="10" width="80" relative="1" as="geometry">
+            <mxPoint x="730" y="513" as="sourcePoint" />
+            <mxPoint x="850" y="513" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

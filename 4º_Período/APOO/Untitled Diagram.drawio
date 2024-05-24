@@ -1,0 +1,66 @@
+<mxfile host="app.diagrams.net" modified="2023-11-14T18:36:05.450Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 OPR/104.0.0.0" etag="ETDq8g4wbwEHTyI8R6pS" version="22.1.1" type="google">
+  <diagram name="Page-1" id="r5wtqKEXj5prgYypNEKy">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="eemSVl5Tkh_XNwsWxm7F-1" value="1: atualizaConsulta()" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeWidth=0.8;" edge="1" parent="1">
+          <mxGeometry x="-0.6" y="-50" width="80" relative="1" as="geometry">
+            <mxPoint x="320" y="820" as="sourcePoint" />
+            <mxPoint x="320" y="870" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eemSVl5Tkh_XNwsWxm7F-2" value="&lt;u&gt;:Sistema&lt;/u&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="280" y="880" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="eemSVl5Tkh_XNwsWxm7F-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="1">
+          <mxGeometry x="390" y="896" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="eemSVl5Tkh_XNwsWxm7F-4" value="&lt;u&gt;:Veterinário&lt;/u&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="550" y="875" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="eemSVl5Tkh_XNwsWxm7F-5" value="3:update_dados(String sintomas, String Medicamentos)" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeWidth=0.8;" edge="1" parent="1">
+          <mxGeometry y="10" width="80" relative="1" as="geometry">
+            <mxPoint x="770" y="890" as="sourcePoint" />
+            <mxPoint x="890" y="890" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eemSVl5Tkh_XNwsWxm7F-6" value="&lt;u&gt;:Consulta&lt;/u&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="980" y="875" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="eemSVl5Tkh_XNwsWxm7F-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="1">
+          <mxGeometry x="660" y="896" width="320" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="eemSVl5Tkh_XNwsWxm7F-8" value="2:update_consulta()&amp;nbsp;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeWidth=0.8;" edge="1" parent="1">
+          <mxGeometry x="-0.3333" y="9" width="80" relative="1" as="geometry">
+            <mxPoint x="424" y="890" as="sourcePoint" />
+            <mxPoint x="544" y="890" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eemSVl5Tkh_XNwsWxm7F-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="eemSVl5Tkh_XNwsWxm7F-10" target="eemSVl5Tkh_XNwsWxm7F-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eemSVl5Tkh_XNwsWxm7F-10" value="&lt;u&gt;:Cliente&lt;/u&gt;" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="550" y="1090" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="eemSVl5Tkh_XNwsWxm7F-11" value="4:ok: confirma_dados( ): Boolean" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeWidth=0.8;" edge="1" parent="1">
+          <mxGeometry x="-0.0909" y="-90" width="80" relative="1" as="geometry">
+            <mxPoint x="590" y="960" as="sourcePoint" />
+            <mxPoint x="590" y="1070" as="targetPoint" />
+            <mxPoint y="-1" as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eemSVl5Tkh_XNwsWxm7F-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="323" y="790" width="8" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
