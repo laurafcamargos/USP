@@ -1,0 +1,20 @@
+// Laura Fernandes Camargos-13692334
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct
+{
+    int x, y;
+} cartesiano;
+int main()
+{
+    cartesiano p1, p2;
+    int a, b;
+    scanf("%d %d\n%d %d", &p1.x, &p1.y, &p2.x, &p2.y);
+    a = (p2.y - p1.y) / (p2.x - p1.x);
+    b = p1.y - (p1.x * a);
+    if (b < 0)
+        printf("y = %dx %d", a, b);
+    else
+        printf("y = %dx + %d", a, b);
+    return 0;
+}

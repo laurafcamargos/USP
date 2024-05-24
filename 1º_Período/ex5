@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+void quadrado(int *numPtr)
+{
+    *numPtr = *numPtr * *numPtr;
+    return;
+}
+int main()
+{
+    int x, y;
+    scanf("%d", &x);
+    quadrado(&x); // quando passamos o endereço de uma variável chamando a função, o paramâmetro da mesma deve conter um ponteiro do mesmo tipo da variável
+    printf("%d", x);
+    return 0;
+}

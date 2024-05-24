@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+int mdc(int a, int b)
+{
+    if (a % b == 0)
+    {
+        return b;
+    }
+    else
+        return mdc(b, a % b);
+}
+
+int main()
+{
+    int x, y, aux;
+    int *p, *q;
+    p = (int *)malloc(1 * sizeof(int));
+    q = (int *)malloc(1 * sizeof(int));
+
+    scanf("%d", p);
+    scanf("%d", q);
+    while (*p != 1 || *q != 1)
+    {
+        if (*p == 1 && *q == 1)
+            break;
+        aux = mdc(*p, *q);
+        printf("%d\n", aux);
+        scanf("%d", p);
+        scanf("%d", q);
+    }
+
+    free(p);
+    free(q);
+    return 0;
+}

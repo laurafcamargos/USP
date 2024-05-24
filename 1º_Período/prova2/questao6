@@ -1,0 +1,69 @@
+// Laura Fernandes Camargos-13692334
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define n 5
+
+void lerVetor(int *v);
+int *mesclagem(int *a, int *b);
+void ordena(int *a);
+
+void lerVetor(int *v)
+{
+    int i;
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &v[i]);
+    }
+    return;
+}
+int *mesclagem(int *a, int *b)
+{
+    int i, j;
+    int *vetor;
+    vetor = (int *)malloc(2 * n * sizeof(int));
+    for (i = 0; i < n; i++)
+    {
+        vetor[i] = a[i];
+    }
+    for (j = n; j < n + n; j++)
+    {
+        vetor[j] = b[j - n];
+        i++;
+    }
+    ordena(vetor);
+    return vetor;
+}
+void ordena(int *a)
+{
+    int aux, i, j;
+    for (i = 0; i < n + n; i++)
+    {
+        for (j = 1; j < n + n; j++)
+        {
+            if (a[j - 1] > a[j])
+            {
+                aux = a[j - 1];
+                a[j - 1] = a[j];
+                a[j] = aux;
+            }
+        }
+    }
+    return;
+}
+
+int main()
+{
+    int *vet;
+    int vet1[n];
+    int vet2[n];
+    lerVetor(vet1);
+    lerVetor(vet2);
+    vet = mesclagem(vet1, vet2);
+    for (int i = 0; i < n + n; i++)
+    {
+        printf("%d ", vet[i]);
+    }
+
+    return 0;
+}
