@@ -1,0 +1,106 @@
+lazy
+y = [2,7,8];
+1:y é uma lista de 4 elementos: 1,2,7,8
+x = 1:x = lista infinita de 1's 
+z(k) = k : (z(k+1))
+z(1)= 1:(z(2))
+z(2)= 2:(z(3)) -> lista de todos os numeros inteiros.
+z k = iter k (+1)
+
+lista de todas as potências de 2: wk = k:(w(k*2))
+w k = iter k (*2)
+iter :: a -> (a-> a) -> [a] 
+iter k op = k:(iter(op k)op)
+
+Sintaxe Açucarada:
+[2..],[3,5..] 
+primos = p 
+where 
+p (h:t) = h:(p[k|k<-t,mod k h /=0])
+
+
+-- Lazy Computation:
+-- Todo código abaixo compila, mesmo x = x + 1 gerando um loop infinito em haskell.
+-- Isso funciona pois os valores nunca serão usados, logo haskell, com sua lazy
+-- computation, n roda nada do código.
+--
+x = x + 1
+f k = 42 + k
+y = f x
+
+-- w é uma sequencia de infinitos 1, graças a lazy computation.
+w = 1:w
+
+-- definição de todos os numeros reais sem syntax sugar
+z k = k:z (k + 1)
+reais = z 1
+
+-- definição de todas as potência de 2 sem syntax sugar
+p k = k:p (k * 2)
+p2 = p 1
+
+-- generalização das duas operações acima
+itera:: a -> (a -> a) -> [a]
+itera k op = k:itera (op k) op
+
+-- A syntax sugar para isso em haskell é o operador ".."
+
+-- todos os numeros naturais de 2 a 100:
+l = [2..10]
+
+-- todos os numeros naturais de 3 a 100, pulando 2:
+l1 = [3,5..10]
+
+-- todos os numeros naturais começando em 2:
+l2 = [2..]
+
+-- todos os numeros naturais começando em 2, pulando 2:
+l3 = [3,5..]
+
+
+x1 = [2..]
+-- todos os numeros impares:
+x2 = [k | k <- x1, mod k 2 /= 0]
+-- todos os numeros reais, menos os multiplos de 3:
+x3 = [k | k <- x1, mod k 3 /= 0]
+
+-- definição de todos os numeros primos:
+primos = seive [2..]
+    where
+        seive:: (Integral a, Eq a) => [a] -> [a]
+        seive (h:t) = h:seive [k| k <- t, mod k h /= 0]
+
+soma :: Integer -> Integer -> Integer
+soma x y = x + y
+
+-- Note que a soma2 precisa ter Io Integer como retrono pois printa uma mensagem
+soma2 :: Integer -> Integer -> IO Integer
+soma2 x y = do
+    putStrLn "Estou Somando!"
+    return(x + y)
+
+-- Como fazer um Hello World:
+main = do
+    putStrLn "Hello World!"
+    let s1 = soma 4 7
+    putStrLn (show(s1))
+    s2 <- soma2 2 11
+    putStrLn (show(s2))
+    -- printa os 10 primeiros numeros primos
+    putStrLn (show (take 10 primos))
+    -- printa a soma dos 10 primeiros numeros primos
+    putStrLn (show (sum (take 10 primos)))
+    -- printa o 10° numero primo
+    putStrLn (show (primos!!10))
+    -- Leia um numero n
+    line <- getLine
+    let n = read line
+    -- printa os n primeiros numeros primos
+    putStrLn (show (take n primos))
+    -- printa a soma dos n primeiros numeros primos
+    putStrLn (show (sum (take n primos)))
+    -- printa o n° numero primo
+    putStrLn (show (primos!!n))
+
+-- obs: todos esse parenteses podem ser substituidos por "$":
+--  foo( baar (5) ) -> foo $ baar $ 5

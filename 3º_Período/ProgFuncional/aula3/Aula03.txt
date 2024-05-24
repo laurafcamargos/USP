@@ -1,0 +1,4 @@
+Resolver problemas sem utilizar laços de repetição. Em haskell não tem como usar for, até porque as variáveis não podem variar.
+Ex: se vc declara x = 5; ele tem que ser 5 até o codigo acabar
+
+

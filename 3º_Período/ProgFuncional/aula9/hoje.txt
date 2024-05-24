@@ -1,0 +1,34 @@
+Em resumo, o operador "$" é usado para aplicar uma função a um argumento
+enquanto o ponto "." é usado para criar novas funções combinando funções existentes.
+
+
+
+A função map em Haskell é uma função de ordem superior que recebe uma função e uma lista como argumentos 
+e retorna uma nova lista aplicando a função em cada elemento da lista original. A assinatura da função map é a seguinte
+map :: (a -> b) -> [a] -> [b]
+
+
+TUPLAS EM HASKELL: tem que ser homogênea a lista
+- Só consigo colocar todos os elementos
+- A principal utilidade da tupla é quando toda a função só retorna um valor
+
+x = (3,5,"a") :: (Integer, Integer, Char)
+
+f :: (num a) => a -> (a,a)
+fi = (i-1, i+1) --retorna antecessor e sucessor de um numero
+
+p(l,k,_) = k + l
+(px) = 8
+
+--retorna o comprimento da lista
+g[] = 0
+g(h:t) = 1 + (gt) 
+--outra maneira de fazer com case 
+g l = case l of
+    [] -> 0
+    (h:t) -> 1 +(gt)
+--usa o case pra pegar algum elemento de uma tupla
+--parametro tem que ser igual, casamento de padrão
+case x of 
+    (_,k,_) -> 
+    -- para trabalhar com duplas tem as funções fst e snd

@@ -1,0 +1,63 @@
+função sinal(x) em C:
+sinal(x) = (x>0)?1 :((x==0)?o:-1)
+em haskell:
+
+sinal x = if x > 0 then 1 else if x == 0 then 0 else -1 -> jeito errado 
+
+otherwise = True, default do switch case
+
+filtro (>0) [2,-3,5,-2,1] = [2,5,1]
+
+filtro:: (a->Bool) -> [a] -> [a]
+filtro  - [] = []
+filtro teste (h:t) = if (teste h) then h:(filtro teste t) else (filtro teste t)
+
+filtro - [] = []
+filtro teste(h:t)
+    | teste h = h:r
+    |otherwise = r 
+    where
+        r = filtro teste t //where deixa mais elegante
+
+SOLUÇÃO COM REDUCE(faz a mesma coisa): 
+filtro teste = reduce [] (\h(cabeça) r(resultado da cauda) -> if teste h then h:r else r)
+
+> quando mais \lambida mais ilegivel fica seu codigo
+
+
+membro 5 [3,7,2,1] = False
+membro 3 [3,7,2,1] = True
+
+membro :: (Eq a) => a -> [a] -> Bool //dado um tipo a da classe de tipo Eq
+membro f [f1,f2,f3,f4] //4 funções filtro, função nao é da classe Eq
+
+>Eq classe de tipos iguais, Ord, Num, Read,Show
+membro = [] = False
+membro x (h:t)  
+    |x == h = True
+    |otherwise = membro x t
+
+>jeito certo de fazer uma função de somar numeros de uma lista:
+
+soma:: (Num a) => [a] -> a //dado um tipo a da classe de tipo Num
+len :: Num b => [a] -> b // retorna o tamanho 
+
+>Como colocar mais de uma restrição para o retorno de uma função?
+
+tak 2[1,7,3,9] = [1,7]
+tak 3 [1,7] = [1,7]
+
+Integral a // faz isso para poder comparar com o 0
+tak :: (Num a,Eq a)
+tak - [] = []
+tak 0 - = []
+tak n (h:t) = h:(tak(n-1)t)
+
+x = [2,-5,-6,9,4]
+y = map (**2) (filtro(> 0)x) //sintaxe mais utilizada
+y = [a**2 | a <- x, a > 0]
+
+QuickSort:: (Ord a) => [a] -> [a]
+qs [] = []
+qs [x] = [x]
+qs l = ()

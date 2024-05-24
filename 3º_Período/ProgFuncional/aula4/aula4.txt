@@ -1,0 +1,72 @@
+para declarar em haskell:
+- a ordem das coisas nao faz diferença, tipo vc pode declarar o tipo da variavel dps de declarar a variavel 
+x = 5
+x :: int
+y = (x+3)
+y :: int
+f z = z + 5
+f :: int -> int
+f(3) :: Int
+g x y = x + y
+(g 2 9) :: int
+(g 2) :: int -> int
+g :: int -> (int -> int) //o g é uma funcao q dado um int retorna uma função que dado um int retorna um int
+f = (g 5) == f z = z + 5
+- nao tem parenteses, mas o haskell entende perfeitamente
+
+
+//fatorial em haskell:
+fatorial 0 = 1
+fatorial n = n * fatorial (n - 1)
+fatorial :: Integer -> Integer
+- Recursão em haskell: coloca a base, e no final faz um caso q pega o resto pra tratar recursivamente
+//recebe uma lista e retorna o tamanho da lista
+//x = [1,2,9]
+len [] = 0
+len(h:t) = 1 + (len t)
+len :: [a] -> int //o a representa uma tipagem genérica, ou seja, pode ser uma lista de qlqr tipo
+
+//dado uma lista retorna o produto dos elementos da lista
+prod[] = 1
+prod(h:t) = h * (prod t)
+prod :: [int] -> int //tem q fazer a cabeça ser um int
+
+//dado uma lista retorna a soma dos elementos da lista
+soma[] = 0
+soma(h:t) = h + (soma t) 
+soma :: [int] -> int
+
+-boa prática de prog em haskell é nao dar ctrl c ctrl v
+//Funções de alta ordem(função que recebe uma função):
+reduce base f[] = base
+reduce base f(h:t) = f h(reduce base f t) //generaliza as 3 funções de cima, pegar o elemento da cabeça e processar com o elemento da cauda
+reduce :: int -> (int-> int->int) -> [int] -> int //entre () é uma função que tem 2 parâmetros
+reduce :: a -> (b -> a-> a) -> [b] -> a
+
+p x y = x * y
+s x y = x + y | s :: int -> int -> int
+i x y = 1 + y
+-----------------------------------------------------------------------------------
+len l = reduce 0 i l //0 a base, quando l nao for vazio faz o i 
+prod l = reduce 1 p l
+soma l = reduce 0 s l
+//programador experiente:
+len = reduce 0 i //fatorar os parâmetros
+prod = reduce 1 p 
+soma = reduce 0 s 
+-----------------------------------------------------------------------------------
+prod l = reduce 1(x y -> x * y)l
+
+prod = reduce 1 (*)
+soma = reduce 0 (+)
+------------------------------------------------------------------------------------
+map f[] = []
+map f (h:t) = (f h) : (map f t)
+map :: (a -> b) -> [a] -> [b]
+
+x = [1,5,9]
+y = map(*2)x
+z = map (+1)x
+
+
+
