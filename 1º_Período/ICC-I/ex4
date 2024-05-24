@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int potencia(int x, int y)
+{
+    int valor = 1;
+    while (y > 0)
+    {
+        valor = valor * x;
+        y--;
+    }
+    return valor;
+}
+int main()
+{
+    int b, e, x;
+    char operador;
+    while (0 < 1)
+    {
+        scanf("%d %c %d\n", &b, &operador, &e);
+        x = potencia(b, e);
+        if (operador == 'p')
+        {
+            break;
+        }
+        if (operador != '^' && operador != 'p')
+        {
+            printf("operador invalido\n");
+        }
+        if (operador == '^')
+        {
+            printf("%d\n", x);
+        }
+    }
+    return 0;
+}

@@ -1,0 +1,38 @@
+// Laura Fernandes Camargos-13692334
+#include <stdio.h>
+#include <stdlib.h>
+void maiorElemento(int *v, int n, int *maior);
+void lerVetor(int *v, int n);
+
+void lerVetor(int *v, int n)
+{
+    int i;
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d\n", &v[i]);
+    }
+    return;
+}
+void maiorElemento(int *v, int n, int *maior)
+{
+    int i;
+    *maior = v[0];
+    for (i = 0; i < n; i++)
+    {
+        if (v[i] > *maior)
+            *maior = v[i];
+    }
+    return;
+}
+
+int main()
+{
+    int tamanho, maior;
+    int *vetor;
+    scanf("%d", &tamanho);
+    lerVetor(vetor, tamanho);
+    maiorElemento(vetor, tamanho, &maior);
+    printf("O maior elemento do vetor eh: %d", maior);
+
+    return 0;
+}

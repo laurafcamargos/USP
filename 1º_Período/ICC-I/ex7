@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int mdc(int a, int b)
+{
+    if (a % b == 0)
+    {
+        return b;
+    }
+    else
+        return mdc(b, a % b);
+}
+void simplifica_fracao(int *numerador, int *denominador)
+{
+    int mdcaux;
+    if (*numerador < 0)
+        *numerador = *numerador * -1;
+
+    if (*denominador < 0)
+        *denominador = *denominador * -1;
+
+    while (mdc(*numerador, *denominador) != 1)
+    {
+
+        mdcaux = mdc(*numerador, *denominador);
+        *numerador /= mdcaux;
+        *denominador /= mdcaux;
+    }
+    return;
+}
+
+int main(void)
+{
+    int num, den;
+    int i;
+    while (scanf("%d %d", &num, &den) != EOF)
+    {
+        simplifica_fracao(&num, &den);
+        printf("%d/%d\n", num, den);
+    }
+
+    return 0;
+}

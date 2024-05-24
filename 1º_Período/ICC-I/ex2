@@ -1,0 +1,57 @@
+#include <stdio.h>
+int main()
+{
+    int i, j, N, M, c1 = 0, c2 = 0, vida = 100, moeda = 0;
+    int m[20][20];
+    char movimento;
+
+    scanf("%d %d", &N, &M);    
+
+    for (i = 0; i < N; i++)
+    {
+        for (j = 0; j < M; j++)
+        {
+            scanf("%d,", &m[i][j]);
+        }
+    }
+
+    while (scanf ("%c", &movimento) != EOF)
+    {
+        switch (movimento)
+        {
+            case '\n':
+                continue;
+            case 'A':
+                c1--;
+                break;
+            case 'D':
+                c1++;
+                break;
+            case 'S':
+                c2++;
+                break;
+            case 'W':
+                c2--;
+                break;
+            default:
+                break;
+        }
+
+        if (m[c2][c1] == 11)
+        {
+            moeda++;
+            m[c2][c1] = 0;
+        }
+
+        else if (m[c2][c1] == 22)
+        {
+            vida = vida - 5;
+        }
+    }
+    printf("posicao x:  %d\n", c1);
+    printf("posicao y:  %d\n", c2);
+    printf("moedas:  %d\n", moeda);
+    printf("life:  %d\n", vida);
+
+    return 0;
+}

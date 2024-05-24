@@ -1,0 +1,33 @@
+﻿1) Implementar e testar o circuito referente a expressão abaixo Q = (A.B) + ( (B+C).(B.C) )
+2) Simplificar a expressão acima, implementar e testar. • Dica: os 2 circuitos podem ser implementados em um mesmo projeto, compartilhando as mesmas entradas (mesmos pinos de entrada) com a saída de cada um indo para LEDs distintos. Com isso, ao colocar cada entrada, você terá a saída dos 2 circuitos ao mesmo tempo, facilitando a comparação dos resultados deles.
+
+
+Placa utilizada: DEO-CV
+
+A: SW0 : PIN_U13
+B: SW1 : PIN_V13
+C: SW2 : PIN_T13
+
+Q: LED[0] :  PIN_AA2 
+
+Q1: LED[1] : PIN_AA1
+
+R: Simplificando a expressão Q, temos:
+
+
+Q = (A.B) + ( (B+C).(B.C) )  
+
+
+       (A.B) + (B.B.C + B.C.C)  
+
+
+       (A.B) + (B.C + B.C)
+
+
+       (A.B) + (B.C)
+
+
+       Q = B.(A+C)
+
+
+Logo, fazendo a tabela verdade da expressão Q, os LED[0] e LED[1] só serão acesos nas entradas (ABC) = 011, 110 e 111. 

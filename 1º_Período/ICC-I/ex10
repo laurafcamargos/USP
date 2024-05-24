@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int **ler_matriz(int linhas, int colunas);
+void somar_matrizes(int **mat1, int **mat2, int linhas, int colunas);
+void imprimir_matriz(int **mat, int linhas, int colunas);
+void liberar_matriz(int **mat, int linhas);
+
+int **ler_matriz(int linhas, int colunas)
+{
+    int i, j, **matriz;
+    matriz = (int **)malloc(linhas * sizeof(int *));
+    for (i = 0; i < linhas; i++)
+    {
+        matriz[i] = (int *)malloc(colunas * sizeof(int));
+        for (j = 0; j < colunas; j++)
+        {
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+    return matriz;
+}
+void somar_matrizes(int **mat1, int **mat2, int linhas, int colunas)
+{
+    int i, j;
+    for (i = 0; i < linhas; i++)
+    {
+        for (j = 0; j < colunas; j++)
+        {
+            mat1[i][j] += mat2[i][j];
+        }
+    }
+    return;
+}
+void imprimir_matriz(int **mat, int linhas, int colunas)
+{
+    int i, j;
+    for (i = 0; i < linhas; i++)
+    {
+        for (j = 0; j < colunas; j++)
+        {
+            printf("%d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+    return;
+}
+void liberar_matriz(int **mat, int linhas)
+{
+    int i;
+    for (i = 0; i < linhas; i++)
+    {
+        free(mat[i]);
+    }
+    free(mat);
+    return;
+}
+int main(void)
+{
+    int ***matrizes;
+    int k, i, j, m, n;
+    scanf("%d", &k);
+    scanf("%d %d", &m, &n);
+    matrizes = (int ***)malloc(k * sizeof(int **));
+
+    for (i = 0; i < k; i++)
+    {
+        matrizes[i] = ler_matriz(n, m);
+    }
+    scanf("%d %d", &i, &j);
+    while (i != 0 || j != 0)
+    {
+        somar_matrizes(matrizes[i], matrizes[j], m, n);
+        scanf("%d %d", &i, &j);
+    }
+    imprimir_matriz(matrizes[i], m, n);
+    liberar_matriz(matrizes[i], m);
+}

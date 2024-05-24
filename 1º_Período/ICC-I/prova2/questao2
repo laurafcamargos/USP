@@ -1,0 +1,61 @@
+//Laura Fernandes Camargos- 13692334
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void localiza(int **mat,int linha,int coluna,int *maior,int *menor,int *linhamaior,int *colunamaior,int *linhamenor,int *colunamenor)
+{
+    int i,j;
+    *maior = -9;
+    *menor = 10000;
+    for(i=0; i<linha; i++)
+    {
+        for(j=0; j<coluna; j++)
+        {
+            if(mat[i][j] > *maior)
+            {
+                *maior = mat[i][j];
+                *linhamaior = i;
+                *colunamaior = j;
+            }
+            if(mat[i][j] < *menor)
+            {
+                *menor = mat[i][j];
+                *linhamenor = i;
+                *colunamenor = j;
+            }
+        }
+    }
+    return;
+}
+int main()
+{
+    int n,m;
+    int **matriz;
+    int maior,linhamaior,colunamaior;
+    int menor,linhamenor,colunamenor;
+    scanf("%d %d",&n,&m);
+    matriz= (int **)malloc(n*sizeof(int*));
+    srand(time(NULL));
+
+    for(int i=0; i<n; i++)
+    {
+        matriz[i]= (int *)malloc(m*sizeof(int));
+        for(int j=0; j<m; j++)
+        {
+            matriz[i][j] = rand() % 1000;
+        }
+    }
+    for(int i=0; i<n; i++)
+    {
+        for(int j=0; j<m; j++)
+        {
+            printf("%d ",matriz[i][j]);
+        }
+        printf("\n");
+    }
+    localiza(matriz,n,m,&maior,&menor,&linhamaior,&colunamaior,&linhamenor,&colunamenor);
+    printf("O maior elemento eh: %d, na linha %d e coluna %d\nO menor elemento eh: %d,na linha %d e coluna %d",maior,linhamaior,colunamaior,menor,linhamenor,colunamenor);
+    return 0;
+}
+

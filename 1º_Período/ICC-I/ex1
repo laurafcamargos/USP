@@ -1,0 +1,47 @@
+#include <stdio.h>
+int main(){
+	int vet[20],c1=0,c2=0,c3=0,c4=0,c5=0;
+	int i,a,b=100,c=100,d=100,e=100;
+	
+	for(i=0; i<20; i++)
+	{
+	scanf("%d", &vet[i]);	
+	}
+	
+	for(i=0; i<20; i++){
+		if(vet[i]<= a){
+		c1++;
+		a= vet[i];
+		}
+		else{
+			if(vet[i]<=b){
+			c2++;
+			b= vet[i];
+			}
+	else{
+			if(vet[i]<=c){
+			c3++;
+			c= vet[i];
+			}
+	    else{
+			if(vet[i]<=d)
+            {
+			c4++;
+			d= vet[i];
+			}
+		     else{
+			   if(vet[i]<=e)
+               {
+			   c5++;
+			   e= vet[i];
+			   }
+            }
+	    }
+	}	
+		}	
+	   }
+	    printf("%d %d %d %d %d", c1,c2,c3,c4,c5);
+	
+	
+	return 0;
+}

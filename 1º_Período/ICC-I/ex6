@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int countCasas(int num);
+int minhaPow(int a, int b);
+void inverteDigitos(int *numPtr);
+
+void inverteDigitos(int *numPtr)
+{
+    int aux = *numPtr;
+    int aux2 = *numPtr;
+    int final = 0;
+    int casas = countCasas(*numPtr) - 1;
+
+    while (aux2 != 0)
+    {
+        aux = aux2 % 10;
+        aux2 = aux2 / 10;
+
+        final += aux * minhaPow(10, casas);
+        casas--;
+    }
+
+    *numPtr = final;
+
+    return;
+}
+int countCasas(int num)
+{
+    int casas = 0;
+
+    while (num != 0)
+    {
+        num /= 10;
+
+        casas++;
+    }
+
+    return casas;
+}
+
+int minhaPow(int a, int b)
+{
+    int valor = 1;
+    while (b > 0)
+    {
+        valor = valor * a;
+        b--;
+    }
+
+    return valor;
+}
+
+int main()
+{
+    int num, y;
+    scanf("%d", &num);
+    inverteDigitos(&num);
+    printf("%d", num);
+
+    return 0;
+}

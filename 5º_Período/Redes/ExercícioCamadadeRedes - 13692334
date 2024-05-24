@@ -1,0 +1,42 @@
+Redes de Computadores
+Atividade da Camada de Redes
+Prof. Jó Ueyama
+
+Nome: Laura Fernandes Camargos
+NUSP: 13692334
+---------------------------------------------------------------------------------------------------------------------------------
+1) Explique as funções chaves dos dois componentes do roteador: algoritmo de roteamento e a tabela de repasse.
+
+- O algoritmo de roteamento é usado para estabelecer as rotas seguindo os pacotes de dados para chegar ao destino. Basicamente, é um passo a passo usado para direcionar o tráfego da Internet de forma eficiente. Já a tabela de repasse indica para qual das interfaces de enlace do roteador o pacote deve ser repassado. Sendo assim, ela guarda as rotas calculadas pelo algoritmo de roteamento e decide para onde enviar os pacotes.
+---------------------------------------------------------------------------------------------------------------------------------
+2) Responda as duas questões abaixo:
+a) Qual a diferença entre roteamento e repasse implementados na camada de rede?
+
+- A diferença entre eles é que enquanto o repasse é uma ação local realizada independentemente por cada roteador, o roteamento é um processo global que envolve todos os roteadores em uma rede. O repasse é um processo que ocorre em cada roteador ao longo do caminho de um pacote. Quando um pacote chega a um roteador, o roteador deve decidir para qual enlace de saída o pacote deve ser encaminhado. Por outro lado, o roteamento é um processo que determina a rota completa, ou seja, a sequência de roteadores pelos quais um pacote passará desde o remetente até o destinatário. O roteamento é normalmente realizado por algoritmos de roteamento que configuram as tabelas de repasse de cada roteador. 
+---------------------------------------------------------------------------------------------------------------------------------
+b) Explique o problema conhecido como HOL (head of line blocking - bloqueio de cabeça de fila) existente nos roteadores.
+
+- O bloqueio HOL (Head-of-line blocking) é um bloqueio que ocorre na porta de entrada. Este bloqueio ocorre quando dois ou mais pacotes são destinados a uma mesma porta de saída mais alta. Se o pacote de uma porta de entrada mais alta for o escolhido a ser enviado primeiro, o outro pacote deverá esperar.
+---------------------------------------------------------------------------------------------------------------------------------
+3) Um determinado computador possui máscara 255.255.255.192. Qual o número máximo de
+hospedeiros que podem ser conectados nessa rede?
+
+- Com uma máscara de sub-rede de 255.255.255.192, a rede utiliza 26 bits para identificação da rede, restando 6 bits para identificar os hospedeiros. Como 2⁶ = 64 endereços IP e 2 desses são reservados para o endereço de rede e para o broadcast, o número máximo de hospedeiros é igual a 62.
+---------------------------------------------------------------------------------------------------------------------------------
+4) O ICMP trata da comunicação de erros na camada de rede. Um dos erros tratados é o “estouro do TTL”. Explique o que significa o estouro do TTL na camada de rede.
+
+- O TTL é decrementado por cada roteador que o pacote atravessa, e se atingir zero, o pacote é descartado. Um pacote IP não consegue chegar ao seu destino, por exemplo, quando o tempo de vida (TTL) do pacote está expirado (o contador chegou à zero). Logo, uma mensagem de erro ou informacional do ICMP geralmente é enviada, indicando tempo de vida expirado ou “time exceeded”.
+
+---------------------------------------------------------------------------------------------------------------------------------
+5) Qual a vantagem e a desvantagem do protocolo de roteamento que usa o algoritmo link state? E a vantagem e a desvantagem do distance vector?
+
+- Vantagens link state: Converge rapidamente, é imune a ciclos e cada router tem informação completa acerca da topologia da rede.
+- Desvantagens link state: Muito complexo, utiliza muitos recursos como CPU e memória e necessita de maior largura de banda.
+
+- Vantagem distance vector: Mais simples e consome menos recursos.
+- Desvantagem distance vector: Convergência mais lenta e podem propagar informações de roteamento de forma menos eficiente.
+---------------------------------------------------------------------------------------------------------------------------------
+6) Qual o problema chave que levou ao surgimento do protocolo IPv6? Qual a mudança implementada no cabeçalho deste protocolo? Por que houve esta mudança? 
+
+- O problema chave que levou ao surgimento do protocolo IPv6 foi o esgotamento do IPv4 e a necessidade de mais endereços na Internet. Uma das novidades do IPv6 é a possibilidade de utilização de múltiplos cabeçalhos encadeados. Estes cabeçalhos extra permitem uma maior eficiência, pois o tamanho do cabeçalho pode ser ajustado segundo as necessidades, e uma maior flexibilidade, porque podem ser sempre adicionados novos cabeçalhos para satisfazer novas especificações. Houve essa mudança não só para resolver problemas da quantidade de endereços disponíveis, mas também para oferecer novos serviços e benefícios que não existiam no IPv4 ou que não eram utilizados de forma otimizada.
+---------------------------------------------------------------------------------------------------------------------------------

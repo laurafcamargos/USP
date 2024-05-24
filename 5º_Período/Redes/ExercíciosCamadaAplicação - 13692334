@@ -1,0 +1,76 @@
+1. Is your browser running HTTP version 1.0 or 1.1? What version of HTTP is the
+server running?
+R: Browser 1.1. O servidor está rodando na versão 1.1.
+
+2. What languages (if any) does your browser indicate that it can accept to the
+server?
+R:Accept-Language: en-us, en;q=0.50\r\n.
+
+3. What is the IP address of your computer? Of the gaia.cs.umass.edu server?
+R: O IP do computador é 192.168.1.102 e do destinatário Gaia é 128.119.245.12.
+
+4. What is the status code returned from the server to your browser?
+R: 200 OK
+
+5. When was the HTML file that you are retrieving last modified at the server?
+R: Last-Modified: Tue, 23 Sep 2003 05:29:50 GMT\r\n.
+
+6. How many bytes of content are being returned to your browser?
+R: 73 bytes
+
+7. By inspecting the raw data in the packet content window, do you see any headers
+within the data that are not displayed in the packet-listing window? If so, name
+one.
+R: Não vejo.
+
+8.Inspect the contents of the first HTTP GET request from your browser to the
+server. Do you see an “IF-MODIFIED-SINCE” line in the HTTP GET? 
+R: Não, o primeiro HTTP GET não é pra ter.
+
+9.Inspect the contents of the server response. Did the server explicitly return the
+contents of the file? How can you tell? 
+R: Sim, tem o html que foi printado lá. A seção  “Line-Based Text Data” mostra o que o servidor enviou de volta ao meu navegador, que é especificamente o que o site mostrou quando eu o mencionei no meu navegador.
+
+10.Now inspect the contents of the second HTTP GET request from your browser to
+the server. Do you see an “IF-MODIFIED-SINCE:” line in the HTTP GET? If
+so, what information follows the “IF-MODIFIED-SINCE:” header?
+R: Vejo, tem a data e horario da modificação (refresh). O valor dessa informação é Tue, 23 Sep 2003 05:35:00 GMT\r\n.
+
+11. What is the HTTP status code and phrase returned from the server in response to
+this second HTTP GET? Did the server explicitly return the contents of the file?
+Explain.
+R: Ele retorna "Not Modified" e não retorna explicitamente, pois o conteúdo é o mesmo. O navegador basicamente recuperou o conteúdo "antigo" do cache. 
+
+12. How many HTTP GET request messages did your browser send? Which packet
+number in the trace contains the GET message for the Bill or Rights?
+R: Apenas 1 HTTP GET. O pacote que continha a mensagem GET era o Packet Number 8.
+
+13. Which packet number in the trace contains the status code and phrase associated
+with the response to the HTTP GET request?
+R: Packet Number 14.
+
+14. What is the status code and phrase in the response?
+R: 200 OK.
+
+15. How many data-containing TCP segments were needed to carry the single HTTP
+response and the text of the Bill of Rights?
+R: 4 segmentos TCP = 4.816 bytes.
+
+16. How many HTTP GET request messages did your browser send? To which
+Internet addresses were these GET requests sent?
+R: 3 HTTP GET foram enviadas para os endereços:
+128.119.245.12
+165.193.123.218
+134.241.6.82
+
+17. Can you tell whether your browser downloaded the two images serially, or
+whether they were downloaded from the two web sites in parallel? Explain.
+R: O download foi feito em paralelo, uma vez que ambos os arquivos foram solicitados e retornados no mesmo período (GET, GET, resposta, resposta).
+
+18. What is the server’s response (status code and phrase) in response to the initial
+HTTP GET message from your browser?
+R: “401 Authentication Required”.
+
+19. When your browser’s sends the HTTP GET message for the second time, what
+new field is included in the HTTP GET message?
+R: Existe um novo campo incluído "Authorization", que foi adicionado porque foi enviado ao servidor um nome de usuário e senha junto com a solicitação informando que a autorização a receber a página.
