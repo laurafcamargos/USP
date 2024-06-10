@@ -1,0 +1,44 @@
+Inicialmente recebe uma corrente alternada de 127v RMS, 110v da tomada. Precisamos diminuir a tensão, então por isso o transformador
+
+127V RMS → 24.5V RMS (abaixamento da tensão)
+
+- Calcular tensões de pico:
+antes do transformador: 127×√2 = 179,61V
+
+24.2v no capacitor!!
+
+
+- Relação de transformação = 
+179,61(pico)/ = 18(rms)×√2 = 25,455844123V
+→ jogar esse valor no Ratio do Falstad.
+
+Essa tensão ainda é alternada, ou seja, tem picos e vales (função senoidal).
+
+Ponte de Diodos Retificadora: transformar a tensão alternada em contínua. Desconta 0,7V em cada diodo.
+- Como são 2 ativos por vez perde 1,4V = 25,455844123V - 1,4V= 24,055844123V
+
+Capacitor (filtragem da corrente): Suaviza a curva, age como se fosse um filtro. Ainda deixa um ripple (amplitude entre o max e min da oscilação é o Ripple).
+No trabalho, ele pede para limitar a 10% de Ripple.
+Ripple de 10%, ou seja, 10% de 24,055844123V
+Falstad = 
+
+
+- Calculando o capacitor:
+ C = i / f X Ripple = 0,13655÷(120×2,4055844123) = 0,000473031 = 473,031 uF
+i = iLED + iZENER + iCARGA = 132,9x mA
+CARGA = 100mA
+ZENER = 23,1 - 13 / 820 = 11,95 mA 
+LED = 23,1 - 1,8 / 1000 = 21 mA
+
+Diodo de Zener = passa só 13V
+
+Quando varia a resistência do potenciômetro: vai pro ideal.
+
+POTENCIÔMETRO (cálculo) = iResistor =(13/ 5000 + x) 
+ iResistor * x = 3.7 → corrente no resistor
+ pq daria 3v na saída para o carregador
+descobrir x
+Resistência do potenciômetro: 
+
+
+
