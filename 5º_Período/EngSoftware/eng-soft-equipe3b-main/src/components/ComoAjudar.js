@@ -1,5 +1,5 @@
           import React from 'react';
-          import './ComoAjudar.css'; // Importar o arquivo CSS para os estilos
+          import './components/ComoAjudar.css'; // Importar o arquivo CSS para os estilos
 
           const ComoAjudar = () => {
             return (

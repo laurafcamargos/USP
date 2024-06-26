@@ -1,38 +1,26 @@
-.comoajudar-screen {
-  text-align: center;
-  padding: 20px;
-}
-
-.comoajudar-header {
-  
-  padding: 20px;
-  color: black;
-}
-
-.comoajudar-content {
+.como-ajudar-container {
+  font-family: Arial, sans-serif;
   margin: 20px;
 }
 
-.comoajudar-content p {
-  font-size: 1.2em;
+header {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.comoajudar-list {
-  list-style-type: none;
-  padding-left: 0;
+h1 {
+  font-size: 2em;
+  color: #333;
 }
 
-.comoajudar-list li {
-  margin-bottom: 10px;
-  font-size: 1.1em;
+h2 {
+  font-size: 1.5em;
+  color: #555;
+  margin-top: 20px;
 }
 
-.comoajudar-list a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.comoajudar-list a:hover {
-  text-decoration: underline;
+p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.6;
 }

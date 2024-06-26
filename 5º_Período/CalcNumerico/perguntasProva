@@ -1,5 +1,35 @@
-1- qual a vantagem de lagrange em relação a newton?
+1- qual a vantagem de lagrange em relação a newton? (interp)
 
-2- pq o chute ruim nao funciona pro newton?
+2- pq o chute ruim nao funciona pro newton? 
 
-3- fazer comparações, explicar como funciona
+3- fazer comparações, explicar como funciona (todos)
+
+1-Vantagem da Interpolação de Lagrange: A simplicidade na formulação inicial do polinômio interpolador, sem necessidade de cálculos intermediários como diferenças divididas, torna a interpolação de Lagrange mais fácil de implementar inicialmente.
+
+2-Dependência de um Bom Chute Inicial no Método de Newton: O método de Newton requer um chute inicial próximo da raiz para garantir uma convergência rápida e correta devido à sua natureza de convergência local e sensibilidade a derivadas pequenas ou regiões mal condicionadas. Um chute inicial ruim pode levar à divergência ou convergência para uma raiz errada.
+
+1) Liste duas vantagens e duas desvantagens dos m´etodos iterativos quando comparados com os
+m´etodos diretos para resolu¸c˜ao de sistemas lineares com v´arias inc´ognitas e esparsos.
+Eficiência em Esparsidade: Métodos iterativos podem ser mais eficientes para sistemas lineares esparsos, pois lidam bem com matrizes onde a maioria dos elementos é zero.
+Flexibilidade: Permitem ajustes e otimizações conforme necessário durante o processo iterativo, o que pode ser útil em problemas específicos.
+
+Convergência Não Garantida: A convergência dos métodos iterativos nem sempre é garantida e pode depender da escolha inicial, da matriz do sistema e da precisão desejada.
+Complexidade de Implementação: Pode ser mais complexo implementar métodos iterativos e ajustar os parâmetros de convergência.
+
+2) Qual ´e a principal limita¸c˜ao dos m´etodos diretos baseados em fatora¸c˜ao de matrizes ao resolver
+sistemas lineares grandes e esparsos?
+Memória e Complexidade Computacional: Os métodos diretos, como a fatoração LU, exigem armazenamento de uma matriz densa (mesmo que a matriz original seja esparsa), o que pode ser proibitivo em termos de memória para sistemas grandes.
+Dificuldades com a Esparsidade: Mesmo que a matriz original seja esparsa, a fatoração LU pode gerar uma matriz densa, o que não é eficiente em termos de armazenamento e operações computacionais.
+
+4) Ao resolver um sistema linear n˜ao singular Ax = b, que propriedade faria o m´etodo de Gauss-
+Jacobi falhar? E para o m´etodo de Gauss-Seidel ?
+Portanto, a principal propriedade que faria o método de Gauss-Jacobi e o método de Gauss-Seidel falharem é a falta de diagonal dominância na matriz A. 
+
+a) Descreva a diferen¸ca entre o m´etodo de Gauss-Jacobi e Gauss-Seidel para resolver um sistema linear.
+Diferença: Gauss-Jacobi atualiza xx usando valores da iteração anterior de forma simultânea; Gauss-Seidel atualiza xx sequencialmente à medida que os valores são calculados.
+b) Qual m´etodo converge com mais rapidez?
+Gauss-Seidel geralmente converge mais rapidamente do que Gauss-Jacobi, utiliza as informações mais recentes de xx durante a iteração, o que pode acelerar a convergência em comparação com o método de Gauss-Jacobi, que usa valores antigos de xx.
+
+c) Qual m´etodo requer menos espa¸co de armazenamento para as sucessivas aproxima¸c˜oes?
+O método de Gauss-Jacobi requer menos espaço de armazenamento para as sucessivas aproximações de xx. Isso ocorre porque o método de Gauss-Jacobi utiliza um vetor temporário para armazenar os valores de xx da iteração anterior durante o cálculo da iteração atual. Por outro lado, o método de Gauss-Seidel atualiza cada componente de xx diretamente no vetor xx atual
+Entre os dois métodos, o método de Gauss-Jacobi geralmente ocupa menos espaço de armazenamento para as sucessivas aproximações durante o processo iterativo. Isso ocorre porque ele não precisa armazenar a matriz triangular inferior LL adicionalmente, como no método de Gauss-Seidel.

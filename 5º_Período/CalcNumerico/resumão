@@ -1,0 +1,82 @@
+RESUMO MIN QUADRADOS:
+
+-Objetivo:
+O objetivo do método dos mínimos quadrados é encontrar a melhor aproximação de uma função ou conjunto de dados através de uma projeção ortogonal em um subespaço definido por funções de base.
+
+
+- slide 29/1 --> exemplica o que queremos
+- proj ortogonal de u na reta v!
+- como achamos o v*? achamos o representante da f
+-slide 31/1 - 32/1
+
+v∗=αv
+⟨u−v∗,v⟩=0
+⟨u−v∗,φi⟩=0
+u-(α*nφn),​φi = 0
+f aproximadamente f∗=α0​+α1​φ1​+⋯+αn​φn
+
+<f-f*,fi > = 0, explicar pq resolver o sistema linear acha o alfa
+
+Para encontrar os coeficientes αα, resolvemos o sistema de equações:
+⟨f−f∗,φi⟩=0
+
+Isso significa que a diferença entre a função original f e a função aproximada f∗ deve ser ortogonal a cada função de base φi.
+
+
+-pq tem resolução única? determinantes de vandermont != 0
+caso continuo: fi é o polinomio
+caso discreto: 
+
+Q = ||f-f*||² = é usada para medir o quão boa é a aproximação f∗ em relação à função original f.
+
+
+como fazer outras aproximações?
+
+
+ZEROS DE FUNÇÃO:
+objetivo: metodo iterativo
+f(x) = 0
+bisseção:
+começa no x0, até xn... como paro?
+critério de parada |f(xn)| < ϵ (ficar pequeno), é bom esse criterio de parada?
+-falar pq pode nao ser bom
+
+
+newton (ponto fixo) troca o problema: f(x) = 0 → x = g(x)
+depende de uma boa escolha de x0!!!!
+
+método da secante: precisa de dois chutes iniciais	
+outras raízes nao cai, só até secante
+
+
+
+
+
+Sistemas Lineares: Métodos Iterativos
+
+Gauss-Jacobi: 
+Método de Gauss-Seidel: usa x novo! 
+diferença entre os dois: Seidel converge mais
+rápido, processo sequencial por construção.
+Jacobi é paralelizável, pq nao depende dos passos anteriores.
+
+
+AUTOVALOR:
+
+Definic¸ ˜ao (matrizes semelhantes)
+As matrizes A, B ∈ M(n, n) s˜ao semelhantes se existir P ∈ M(n, n) in-
+vert´ıvel, tal que:
+B = P−1AP .
+ 
+Processo de Ortogonalizac¸ ˜ao de Gram-Schmidt - desentortando os vetores - clássico
+modificado: 
+
+
+
+Potencia 
+Potencia inversa:
+só em matriz diagonalizável 
+explicar a relação dos auvetores
+colocar potencia e potencia inversa e explicar como calcula
+SVD NAO CAI
+
