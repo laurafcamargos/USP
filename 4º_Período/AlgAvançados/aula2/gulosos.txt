@@ -1,0 +1,25 @@
+Nem sempre força bruta é ruim, pois pode ser eficiente.
+Problema da moeda é um clássico da estratégia gulosa. 
+função mínima_moedas(moedas[], valor V):
+    inicializar dp[] com [infinito] para todos os valores de 1 até V
+    dp[0] = 0  # 0 moedas são necessárias para fazer o valor 0
+    
+    para cada valor i de 1 até V:
+        para cada moeda em moedas[]:
+            se moeda <= i:
+                dp[i] = mínimo(dp[i], dp[i - moeda] + 1)
+    
+    se dp[V] == infinito:
+        retornar -1  # Não é possível fazer o valor V com as moedas dadas
+    senão:
+        retornar dp[V]
+
+
+
+
+Agendamento de Intervalos (Interval Scheduling)
+Tafera j começa em sj e termina em fj
+Duas tarefas são compatíveis se não há sobreposição 
+Objetivo: encontre o subconjunto máximo de tarefas mutuamente compatíveis
+Algoritmo guloso - implementação O(nlogn)
+Guarde a tarefa j* que já foi add por último em A 
