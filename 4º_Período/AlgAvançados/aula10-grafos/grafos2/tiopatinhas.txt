@@ -1,0 +1,5 @@
+1 - SCC -> cor (kosaraju)
+2 - cria DAG e as fortunas dos SCCs
+3 - PD = 0 para cada SCC 
+4 - DFS(i,PD)
+5 - return max (PD)

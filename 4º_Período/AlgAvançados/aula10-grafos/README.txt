@@ -1,3 +1,3 @@
-Arquivo zip gerado em: 10/08/2024 18:02:54 
+Arquivo zip gerado em: 19/11/2024 20:16:17 
 Este arquivo contém os casos de teste cadastrados até o momento, disponibilizado pelo professor aos alunos.
-Exercício: STL 2
+Exercício: grafos 2

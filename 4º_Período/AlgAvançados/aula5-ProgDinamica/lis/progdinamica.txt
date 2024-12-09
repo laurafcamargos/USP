@@ -1,0 +1,8 @@
+Programação dinâmica, combina o melhor das duas estratégias.
+
+Nos dá uma forma sistemática de buscar todas as possibilidades (garante otimalidade), ao
+armazenar resultados parciais de forma a evitar recálculo (o que dá eficiência).
+
+Ao armazenar o resultado de todas as possíveis decisões, e usar tal informação de forma sistemática, o esforço final é minimizado tremendamente.
+
+O truque é perceber quando o algoritmo recursivo original calcula a mesma coisa várias vezes.

@@ -1,0 +1,23 @@
+->Alinhamento de Stirngs
+-> Edit Distance
+//Exemplo 1
+s1 = mean
+s1 = name
+
+Qual o custo mínimo de transformar s1 em s2?
+
+
+->Subset e BitMasking
+- é a generalização do problema da mochila: dado um conjunto de números inteiros, verificar se existe
+um subconjunto (subset) cuja soma seja um valor V.
+- booleano entre pertencer ou não.
+memo[m][1<<n]
+- regra 1: if (mask == (1 << n) - 1) {
+    return dist[pos][0];  // Retorna à cidade inicial
+}
+
+-regra geral: min(dist[pos][nxt] qlqrnxt 0...n-1 que não seja pos) + solve(nxt,mask|(1<<nxt)) {
+
+} 
+
+complexidade: O(n².2^n) //da pra fazer até 20

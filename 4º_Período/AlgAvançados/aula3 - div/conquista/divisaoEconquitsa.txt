@@ -1,0 +1,5 @@
+Divisão e Conquista: nlogn - árvore de recursão
+
+Contando Inversão: análise de ranking é algo mt usado hoje em dia (web). Vários sites usam o que se chama de filtragem colaborativa para tentar dar matching suas preferências.
+ex: feito isso, vc recebe uma serie de dicas sobre o que consumir
+A métrica de similaridade pode ser a quantidade de inversões entre os dois rankings

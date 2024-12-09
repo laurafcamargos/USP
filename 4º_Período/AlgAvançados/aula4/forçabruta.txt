@@ -1,0 +1,34 @@
+Labirinto: https://ic.unicamp.br/~zanoni/teaching/mc102/2014-1s/aulas/aula19.pdf
+igual problema do cavalo, nao tem heuristica
+
+Farmácia: dado o grafo, vc vai calcular o maior trajeto, nem pede os vertices, tem q ver pra todo mundo
+nao tem peso as arestas
+def turismo_farmaceutico(n, grafo):
+    max_trajeto = 0  # Armazena o maior trajeto encontrado
+
+    # Função auxiliar para backtracking
+    def backtrack(v, arestas_visitadas, comprimento_atual):
+        nonlocal max_trajeto
+        # Atualiza o maior trajeto encontrado
+        max_trajeto = max(max_trajeto, comprimento_atual)
+
+        # Tenta visitar todos os vizinhos de v
+        for vizinho in grafo[v]:
+            # Verifica se a aresta (v, vizinho) já foi visitada
+            if (v, vizinho) not in arestas_visitadas and (vizinho, v) not in arestas_visitadas:
+                # Marca a aresta como visitada
+                arestas_visitadas.add((v, vizinho))
+                # Continua a exploração
+                backtrack(vizinho, arestas_visitadas, comprimento_atual + 1)
+                # Desmarca a aresta para explorar outras opções
+                arestas_visitadas.remove((v, vizinho))
+
+    # Itera sobre todos os vértices como ponto de partida
+    for v in range(n):
+        # Usamos um set para marcar as arestas visitadas
+        arestas_visitadas = set()
+        backtrack(v, arestas_visitadas, 0)  # Começa com comprimento 0
+
+    return max_trajeto
+
+pode passar no mesmo vertice mas na mesma rua nao
