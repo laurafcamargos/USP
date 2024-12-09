@@ -1,0 +1,66 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+
+entity morseGen is
+	port (
+		clk : in std_logic;
+		rst : in std_logic;
+		num : in std_logic_vector(2 downto 0);
+		load: in std_logic;
+		led : out std_logic
+		);
+end morseGen;
+
+architecture Behavioral of morseGen is:
+	signal counter : integer := 0;
+	signal running : std_logic : =0;
+	
+	
+begin
+
+	process(clk, rst)
+	begin
+		if rst = '1' then
+			counter <= 0;
+			led <= 0;
+				
+		elsif rising_edge(clk) then
+			if counter < 375000000 then
+				counter <= counter + 1;
+			else
+				counter <= 0;
+			end if;
+		end if;
+	end process;
+	
+	process(load, num)
+	begin
+		if load = '1' then
+			running <= '1'
+		
+		if running then
+		
+			case num is
+			
+				when "001" => -- letra A:  o -
+					if counter < 25000000 then
+						led <= 1;
+					elsif counter < 50000000 then
+						led <= 0;
+					elsif counter < 125000000
+						led <= 1;
+					else
+						led <= 0;
+						running <= 0;
+					
+				when others =>
+					led <= '0';
+			end case;
+		end if;
+	end process;
+end Behavioral;
+					
+		
+				
