@@ -1,0 +1,10 @@
+	.data #dados estáticos
+hello:	.asciz "Hello World!"
+	.text
+	.globl main
+main:
+	la a0, hello # $a0 = endereço do primeiro byte da string hello
+	li a7, 4       #addi a7,zero,4 - $a7 = 4 código para printar string
+	ecall
+	li a7, 10      # $a7 = 10 código para exit
+	ecall
