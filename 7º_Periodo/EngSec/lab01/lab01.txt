@@ -1,0 +1,17 @@
+Cecilia Nunes Sedenho  - 13671810 
+Laura Fernandes Camargos - 13692334 
+Téo Sobrino Alves - 12557192 
+Vicenzo DArezzo Zílio - 13671790 
+
+1. Explique o conteúdo obtido através do tcpdump na máquina EMPRESA2 sendo que ela não foi destino e nem origem de qualquer comunicação. E se fosse uma rede sem fio com proteção fraca?
+
+ A máquina EMPRESA2 recebeu todo o conteúdo que foi transmitido pela rede local porque estava conectada ao HUB, que por definição envia qualquer informação que passa por ele para todos os dispositivos conectados. A rede sem fio sem proteção seria facilmente quebrada por uma máquina maliciosa, que poderia, do mesmo jeito que a máquina EMPRESA2, monitorar a rede mesmo não sendo origem nem destino dos pacotes.
+
+2. Quais seriam opções para melhorar a rede interna cabeada? E sem fio?
+ A troca do HUB por um SWITCH na rede cabeada garantiria que os pacotes recebidos pela rede local seguissem um caminho direto até a máquina destino, o que garantiria maior privacidade e segurança. Para a rede sem fio, é necessário criptografar as comunicações, com os protocolos WEP, WPA ou WPA2. Além disso, em ambos os casos é importante configurar um Firewall, tanto no roteador de acesso à rede local quanto nos dispositivos.
+
+3.Como os pacotes são modificados em cada regra do iptables nos comandos executados neste laboratório?
+ Ao passarem pelo Firewall, os pacotes têm seus endereços IP e porta de destino alterados para os servidores locais (FTP na máquina EMPRESA3 e SSH na máquina EMPRESA1).
+
+4. O que aconteceu com o ftp do SERVIDOR ao criar uma regra bloqueando a porta 20?
+ As requisições que viessem da porta 20 seriam rejeitadas, logo, o ftp não seria acessível. No laboratório não foi feita nenhuma requisição ftp para essa porta.
