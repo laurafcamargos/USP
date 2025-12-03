@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 	int iam = 0, np = 1, provided;
 
 	//  MPI_Init(&argc, &argv);
-	MPI_Init_thread(&argc, &argv, MPI_THREAD_MULTIPLE /*MPI_THREAD_SINGLE*/, &provided);
+	MPI_Init_thread(&argc, &argv, MPI_THREAD_SINGLE /*MPI_THREAD_SINGLE*/, &provided);
 
 	// mesmo que MPI_Init(). Somente uma thread executará
 	if (provided == MPI_THREAD_SINGLE)
